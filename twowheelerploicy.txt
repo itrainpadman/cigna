@@ -1,1 +1,3 @@
-This is two wheeler policy file 
+This is two wheeler policy file
+
+Enabled a new tab to choose different insurance policy scheme and benefits
