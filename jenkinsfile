@@ -1,0 +1,31 @@
+pipeline {
+	agent any
+		stages{
+		   stage ('compile stage')  {
+		   
+				steps {
+					withMaven(maven : 'maven 3.6.1') {
+					  sh 'mvn  clean conpile'
+					  }
+					}
+				}
+				stage ('Testing stage') {
+				
+				steps {
+					withMaven (maven : 'maven 3.6.1') {
+					  sh 'mvn  clean test'
+					  }
+					}
+				}
+				stage ('Deployment test') {
+				
+				steps {
+					withMaven (maven : 'maven 3.6.1') {
+					  sh 'mvn  clean test'
+					  }
+					}
+				}
+			}
+		}
+		          
+				
